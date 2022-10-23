@@ -9,7 +9,7 @@ Resources:
   headerLambda:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: /lambdas/header/dist/
+      CodeUri: lambdas/header/dist/
       Handler: lambda/index.handler
       Runtime: nodejs12.x
       Events:
@@ -22,7 +22,7 @@ Resources:
   mainLambda:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: /lambdas/footer/dist/
+      CodeUri: lambdas/footer/dist/
       Handler: lambda/index.handler
       Runtime: nodejs12.x
       Events:
@@ -35,7 +35,7 @@ Resources:
   footerLambda:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: /lambdas/main/dist
+      CodeUri: lambdas/main/dist
       Handler: lambda/index.handler
       Runtime: nodejs12.x
       Events:
