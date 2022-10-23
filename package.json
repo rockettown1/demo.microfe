@@ -1,0 +1,19 @@
+{
+  "name": "demo.microfe",
+  "version": "1.0.0",
+  "description": "Stitching together React fragments via lambda functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rockettown1/demo.microfe.git"
+  },
+  "author": "Dan Krishnan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rockettown1/demo.microfe/issues"
+  },
+  "homepage": "https://github.com/rockettown1/demo.microfe#readme"
+}
