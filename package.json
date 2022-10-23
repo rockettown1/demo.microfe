@@ -4,7 +4,8 @@
   "description": "Stitching together React fragments via lambda functions",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-api": "sam local start-api -p 3001"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/rockettown1/demo.microfe/issues"
   },
-  "homepage": "https://github.com/rockettown1/demo.microfe#readme"
+  "homepage": "https://github.com/rockettown1/demo.microfe#readme",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.108",
+    "lerna": "^6.0.1"
+  },
+  "dependencies": {
+    "aws-lambda": "^1.0.7"
+  }
 }
