@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-const ASSET_PATH = process.env.ASSET_PATH || "/demo-microfe/header";
+const ASSET_PATH = process.env.ASSET_PATH || "/demo-microfe/header/";
 
 //bundle lambda js
 const lambdaConfig = {
