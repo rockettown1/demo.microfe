@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-api": "./scripts/run-api.sh",
     "start-proxy": "PORT=3000 babel-node --presets @babel/preset-env server/proxy.ts",
-    "start-all": "npm-run-all --parallel start-api start-proxy"
+    "start-all": "npm-run-all --parallel start-api start-proxy",
+    "bootstrap:local": "lerna exec npm i"
   },
   "repository": {
     "type": "git",
