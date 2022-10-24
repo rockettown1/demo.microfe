@@ -10,4 +10,4 @@ You'll need to go to each lambda directory to run webpack and generate the dist 
 
 From the main directory run the SAM cli which will spin up the Lambda functions locally and serve them through an apigateway `npm run start-all`
 
-There will eventually be a working proxy server (Fastify) sat in front of this.
+This will also spin up a Fastify proxy server to make serving static assets easier.
