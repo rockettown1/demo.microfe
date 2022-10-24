@@ -10,7 +10,19 @@ const server = Fastify({
 
 server.register(fastifyStatic, {
   root: path.join(__dirname, "../", "lambdas", "header", "dist", "lambda"),
-  prefix: "/demo-microfe/header/",
+  prefix: "/demo-microfe/header",
+  decorateReply: false,
+});
+
+server.register(fastifyStatic, {
+  root: path.join(__dirname, "../", "lambdas", "footer", "dist", "lambda"),
+  prefix: "/demo-microfe/footer",
+  decorateReply: false,
+});
+server.register(fastifyStatic, {
+  root: path.join(__dirname, "../", "lambdas", "main", "dist", "lambda"),
+  prefix: "/demo-microfe/main",
+  decorateReply: false,
 });
 
 server.get("/hi", (request, reply) => {
@@ -18,7 +30,7 @@ server.get("/hi", (request, reply) => {
 });
 
 server.register(proxy, {
-  upstream: "http://localhost:3001",
+  upstream: "http://127.0.0.1:3001",
   prefix: "/",
   http2: false,
 });

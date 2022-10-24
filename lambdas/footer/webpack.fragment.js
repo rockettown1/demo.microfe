@@ -29,7 +29,7 @@ const lambdaConfig = {
 //bundle clientside js
 const clientConfig = {
   mode: "production",
-  target: "node",
+  target: "web",
   entry: { client: "./src/client/index.tsx" },
   output: {
     path: path.resolve("dist", "lambda"),

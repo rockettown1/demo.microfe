@@ -2,10 +2,6 @@ AWSTemplateFormatVersion: "2010-09-09"
 Transform: AWS::Serverless-2016-10-31
 Description: AWS SAM template
 Resources:
-  ApiGatewayApi:
-    Type: AWS::Serverless::Api
-    Properties:
-      StageName: Prod
   headerLambda:
     Type: AWS::Serverless::Function
     Properties:
@@ -16,32 +12,29 @@ Resources:
         ProxyApiRoot:
           Type: Api
           Properties:
-            RestApiId: !Ref ApiGatewayApi
             Path: /live/demo-microfe/header
             Method: GET
-  # mainLambda:
-  #   Type: AWS::Serverless::Function
-  #   Properties:
-  #     CodeUri: lambdas/footer/dist/
-  #     Handler: lambda/index.handler
-  #     Runtime: nodejs12.x
-  #     Events:
-  #       ProxyApiRoot:
-  #         Type: Api
-  #         Properties:
-  #           RestApiId: !Ref ApiGatewayApi
-  #           Path: /live/demo-microfe/footer
-  #           Method: GET
-  # footerLambda:
-  #   Type: AWS::Serverless::Function
-  #   Properties:
-  #     CodeUri: lambdas/main/dist
-  #     Handler: lambda/index.handler
-  #     Runtime: nodejs12.x
-  #     Events:
-  #       ProxyApiRoot:
-  #         Type: Api
-  #         Properties:
-  #           RestApiId: !Ref ApiGatewayApi
-  #           Path: /live/demo-microfe/main
-  #           Method: GET
+  mainLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: lambdas/footer/dist/
+      Handler: lambda/index.handler
+      Runtime: nodejs16.x
+      Events:
+        ProxyApiRoot:
+          Type: Api
+          Properties:
+            Path: /live/demo-microfe/footer
+            Method: GET
+  footerLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: lambdas/main/dist
+      Handler: lambda/index.handler
+      Runtime: nodejs16.x
+      Events:
+        ProxyApiRoot:
+          Type: Api
+          Properties:
+            Path: /live/demo-microfe/main
+            Method: GET
