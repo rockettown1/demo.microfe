@@ -19,7 +19,6 @@
     "webpack": "^5.74.0"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true,
-    "stepDefinitions": "e2e/[filepath].{js,ts}"
+    "nonGlobalStepDefinitions": true
   }
 }
